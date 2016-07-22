@@ -1,0 +1,8 @@
+<h2>Submit an image</h2>
+<%= form_for :image, url: images_path do |i|%>
+  <div>
+    <%= i.label :link %>
+    <%= i.text_field :link %>
+  </div>
+  <%= i.submit %>
+<% end %>
