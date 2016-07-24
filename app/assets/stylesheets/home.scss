@@ -3,14 +3,117 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 @import url(https://fonts.googleapis.com/css?family=Knewave);
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300);
 
 body{
   text-align: center;
   background-color: #f0f0f0;
+  padding: 0;
+  margin: 0;
 }
 
-h1{
-  font-family: "Knewave";
-  font-size: 4em;
-  margin-top: 200px;
+.welcome{
+
+  h1{
+    font-family: "Lato";
+    font-weight: 300;
+    font-size: 64px;
+
+    span{
+      font-family: "Knewave";
+      padding-left: 5px;
+    }
+  }
+}
+
+header{
+  background: #f0f0f0;
+  text-align: center;
+  width: 100vw;
+  height: 100px;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+
+  h1{
+    font-family: "Knewave";
+    font-size: 2.4em;
+    margin-top: 15px;
+    margin-bottom: 10px;
+
+    a{
+      text-decoration: none;
+      color: rgba(0,0,0,0.7);
+      transition: color 0.3s ease-in-out;
+
+      &:hover{
+        color: rgba(0, 0, 0, 1);
+      }
+    }
+  }
+
+  div{
+    width: 100px;
+    // cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover{
+      background-color: rgba(0,0,0,0.2);
+      color: #fff;
+    }
+  }
+}
+
+.plus{
+
+  border-left: 1px solid rgba(0,0,0,0.2);
+  padding: 0;
+  margin: 0;
+
+  a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding-top: 7px;
+    font-family: "Lato";
+    font-weight: 100;
+    font-size: 4em;
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+}
+
+.board{
+
+  border-right: 1px solid rgba(0,0,0,0.2);
+  position: relative;
+
+  span{
+    display: block;
+    width: 70%;
+    height: 2px;
+    margin: 23px auto 0px;
+    background-color: #000;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  &:hover > span{
+    background-color: #fff;
+  }
+
+  a{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+  }
+}
+
+.container{
+  padding-top: 125px;
 }
